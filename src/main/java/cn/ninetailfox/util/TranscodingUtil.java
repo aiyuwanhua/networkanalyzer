@@ -36,4 +36,11 @@ public class TranscodingUtil {
         return result;
     }
 
+    public static long byteArray2Long(byte[] source) {
+        if (source == null) {
+            return -1L;
+        }
+        return Long.valueOf(byteArray2HexString(source), 16);
+    }
+
 }

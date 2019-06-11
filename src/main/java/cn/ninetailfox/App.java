@@ -35,7 +35,7 @@ public class App
             pool.execute(() -> {
                 try {
                     JpcapCaptor cap = JpcapCaptor.openDevice(inter, 65535, true, 50);
-                    cap.setFilter("dst 192.168.1.4", true);
+                    cap.setFilter("dst 132.126.2.44", true);
                     while (true) {
                         Packet packet = cap.getPacket();
 /*                        if (packet instanceof UDPPacket) {
